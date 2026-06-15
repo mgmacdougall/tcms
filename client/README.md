@@ -212,6 +212,85 @@ client/
 │
 ├── public/
 └── package.json
+---> New structure:
+src/
+components/
+HeaderNavBar/
+HeaderNavBar.jsx
+HeaderNavBar.css
+SideBar/
+SideBar.jsx
+SideBar.css
+Common/
+Button.jsx
+Card.jsx
+Modal.jsx
+
+context/
+AuthContext.jsx
+TestCaseContext.jsx (optional later)
+
+hooks/
+useAuth.js
+useFetch.js
+useTestCases.js (optional later)
+
+pages/
+Dashboard/
+DashboardPage.jsx
+
+    Login/
+      LoginPage.jsx
+
+    TestCases/
+      List/
+        TestCaseListPage.jsx
+        List.css
+        components/
+          TestCaseCard.jsx
+          EmptyState.jsx
+
+      Details/
+        TestCaseDetailsPage.jsx
+        Details.css
+        components/
+          StepsList.jsx
+          MetadataPanel.jsx
+          Preconditions.jsx
+
+      Create/
+        TestCaseCreatePage.jsx
+        Create.css
+        components/
+          CreateForm.jsx
+
+      Edit/
+        TestCaseEditPage.jsx
+        Edit.css
+        components/
+          EditForm.jsx
+
+    Users/
+      UserPage.jsx
+
+services/
+api.js
+testcaseService.js
+userService.js
+authService.js
+
+utils/
+formatDate.js
+validators.js
+constants.js
+
+styles/
+App.css
+layout.css
+index.css
+
+App.jsx
+main.jsx
 
 server/
 │

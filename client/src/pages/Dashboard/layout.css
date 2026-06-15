@@ -1,7 +1,12 @@
-body {
-  overflow: auto;
+/* No scrollbars on the page */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;   /* prevents page scrollbars */
 }
 
+/* Fixed sidebar */
 .sidebar {
   width: 220px;
   height: 100vh;
@@ -10,23 +15,41 @@ body {
   top: 0;
 }
 
+/* Everything to the right of the sidebar */
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  margin-left: 220px;   /* space for sidebar */
+  height: 100vh;        /* full viewport height */
+  min-height: 0;        /* CRITICAL for Recharts */
   min-width: 0;
 }
 
+/* Top navigation bar */
 .topnav {
   height: 60px;
   flex-shrink: 0;
+  background: white;
+  border-bottom: 1px solid #ddd;
 }
 
+/* Main content area — NO SCROLLBAR */
 .main-content {
-   flex: 1;           
-  min-height: 0;     
-  min-width: 0;
-  overflow: auto;   
+  flex: 1 1 auto;
+  min-height: 0;        /* CRITICAL */
+  min-width: 0;         /* CRITICAL */
+  overflow: hidden;     /* prevents scrollbars */
   padding: 20px;
   background-color: #f8f9fa;
+}
+
+/* Ensure Bootstrap rows/cols never collapse */
+.row {
+  min-width: 0;
+  min-height: 0;
+}
+
+[class*="col-"] {
+  min-width: 0;
+  min-height: 0;
 }

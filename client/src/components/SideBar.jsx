@@ -16,7 +16,7 @@ function SideBar() {
           </Link>
         </li>
         <li className="nav-item mb-2">
-          <Link to="/test-suites" className="nav-link text-dark">
+          <Link to="/suites" className="nav-link text-dark">
             Test Suites
           </Link>
         </li>

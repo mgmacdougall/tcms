@@ -109,3 +109,10 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+
+.my-card {
+ min-width: 0;
+  min-height: 0;
+}
+

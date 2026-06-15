@@ -4,7 +4,7 @@ import SideBar from "../../components/SideBar";
 import "./layout.css";
 import SalesChart from "../../components/SalesChart";
 import UserGrowthChart from "../../components/UserGrowthChart";
-import KPIContainer from "../../components/KPIContainer";
+// import KPIContainer from "../../components/KPIContainer";
 import KPIBar from "../../components/KPIBar";
 function Dashboard() {
   const salesData = [
@@ -33,7 +33,7 @@ function Dashboard() {
       <SideBar />
       <div className="content-wrapper">
         <HeaderNavBar />
-        <div className="main-content">
+        <div className="main-content" style={{ minWidth: 0, minHeight: 0 }}>
           <>
             <h2>Dashboard Area</h2>
             <p>
@@ -43,7 +43,7 @@ function Dashboard() {
             <KPIBar items={kpis} />
             {/* <KPIContainer /> */}
             <SalesChart data={salesData} />
-            <div className="row">
+            <div className="row" style={{ minWidth: 0, minHeight: 0 }}>
               <div className="col-md-6" style={{ minWidth: 0, minHeight: 0 }}>
                 <SalesChart data={salesData} />
               </div>
