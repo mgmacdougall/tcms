@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function StepsList.() {
-  return (
-    <div>StepsList.</div>
-  )
+function StepsList() {
+  return <div>StepsList</div>;
 }
 
-export default StepsList.
+export default StepsList;
