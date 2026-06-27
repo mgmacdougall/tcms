@@ -64,9 +64,9 @@
 **As a user**, I want to view all test cases in a paginated table.  
 **Acceptance Criteria:**
 
-- Table with sorting, filtering, pagination.
-- API endpoint for GET /testcases.
-- Loading and error states.
+- Table with sorting, filtering, pagination. - in progress
+- API endpoint for GET /testcases. - done
+- Loading and error states. - not started
 
 ### Story 7 — Edit & Delete Test Case
 
