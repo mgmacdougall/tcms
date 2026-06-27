@@ -42,7 +42,9 @@ function Dashboard() {
             </p>
             <KPIBar items={kpis} />
             {/* <KPIContainer /> */}
-            <SalesChart data={salesData} />
+            <div style={{ width: "100%", height: 300 }}>
+              <SalesChart data={salesData} />
+            </div>
             <div className="row" style={{ minWidth: 0, minHeight: 0 }}>
               <div className="col-md-6" style={{ minWidth: 0, minHeight: 0 }}>
                 <SalesChart data={salesData} />
