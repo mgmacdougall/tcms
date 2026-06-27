@@ -3,7 +3,8 @@ import axios from "axios";
 import SideBar from "../../../components/SideBar";
 import HeaderNavBar from "../../../components/HeaderNavBar";
 import MenuBar from "./components/MenuBar";
-import TestcaseForm from "./components/TestcaseForm";
+import TestCaseForm from "./components/TestCases/TestCaseForm/TestCaseForm";
+
 function TestCaseListPage() {
   const [testCases, setTestCases] = useState([]);
   const [refresh, setRefresh] = useState(0);
@@ -26,10 +27,41 @@ function TestCaseListPage() {
   };
 
   const handleCreateTestCase = async (testCaseData) => {
+    console.log(testCaseData);
+    const testBody = {
+      title: "User can successfully log New test12121211",
+      description:
+        "Verify that a valid user can log in and reach the dashboard.",
+      preconditions: "User account exists with valid credentials.",
+      steps: [
+        {
+          stepNumber: 1,
+          action: "Navigate to /login page",
+          expectedResult: "Login page loads successfully",
+        },
+        {
+          stepNumber: 2,
+          action: "Enter valid username and password",
+          expectedResult: "Credentials are accepted",
+        },
+        {
+          stepNumber: 3,
+          action: "Click the Login button",
+          expectedResult: "User is redirected to the dashboard",
+        },
+      ],
+      priority: "High",
+      status: "Ready",
+      createdBy: "6a25f662cb94418c4b6ebcd5",
+      updatedBy: "6a25f662cb94418c4b6ebcd5",
+      project: "6a25f662cb94418c4b6ebcd5",
+      version: 1,
+      tags: ["login", "smoke", "auth"],
+    };
     try {
       const response = await axios.post(
         "http://localhost:5050/api/testcase",
-        testCaseData,
+        testBody,
       );
       console.log("Created test case:", response.data);
       setRefresh((prev) => prev + 1);
@@ -50,9 +82,10 @@ function TestCaseListPage() {
             <MenuBar toggleForm={handleFormToggle} />
             {testCases.length === 0 && <p>No test cases found.</p>}
             {displayForm && (
-              <TestcaseForm
+              <TestCaseForm
                 setUIDisplayForm={setDisplayForm}
                 formState={displayForm}
+                onSubmitTestCase={handleCreateTestCase}
               />
             )}
             {testCases.length > 0 && (
