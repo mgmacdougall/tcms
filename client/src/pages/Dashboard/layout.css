@@ -35,12 +35,11 @@ html, body {
 
 /* Main content area — NO SCROLLBAR */
 .main-content {
-  flex: 1 1 auto;
-  min-height: 0;        /* CRITICAL */
-  min-width: 0;         /* CRITICAL */
-  overflow: hidden;     /* prevents scrollbars */
-  padding: 20px;
-  background-color: #f8f9fa;
+ flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  height: calc(100vh - 60px); /* topnav height */
 }
 
 /* Ensure Bootstrap rows/cols never collapse */
