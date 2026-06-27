@@ -56,7 +56,7 @@
 **Acceptance Criteria:**
 
 - Form validation.
-- API endpoint for POST /testcases.
+- API endpoint for POST /testcases. - done.
 - Success toast + redirect to list view.
 
 ### Story 6 — View Test Cases
@@ -64,7 +64,7 @@
 **As a user**, I want to view all test cases in a paginated table.  
 **Acceptance Criteria:**
 
-- Table with sorting, filtering, pagination. - in progress
+- Table with sorting, filtering, pagination. - table complete, filtering sorting not implemented.
 - API endpoint for GET /testcases. - done
 - Loading and error states. - not started
 
